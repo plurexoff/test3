@@ -1,0 +1,6 @@
+aiogram==3.1.1
+aiohttp>=3.8.0
+python-dotenv>=0.19.0
+aiogram
+aiohttp
+python-dotenv
