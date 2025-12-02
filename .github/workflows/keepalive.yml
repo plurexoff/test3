@@ -16,7 +16,7 @@ jobs:
       - name: Ping Replit Bot
         run: |
           # Замени на свой URL Replit
-          REPLIT_URL="https://твой-project-name.твой-username.replit.dev/"
+          REPLIT_URL="https://replit.com/@sanso1737/test"
           
           # Пингуем бота
           curl -I "$REPLIT_URL" || echo "Пинг завершен (возможна ошибка, но это нормально)"
