@@ -1,0 +1,25 @@
+name: Keep Replit Bot Alive
+
+on:
+  schedule:
+    # Запускается каждые 5 минут
+    - cron: "*/5 * * * *"
+  
+  # Также можно запустить вручную
+  workflow_dispatch:
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Ping Replit Bot
+        run: |
+          # Замени на свой URL Replit
+          REPLIT_URL="https://твой-project-name.твой-username.replit.dev/"
+          
+          # Пингуем бота
+          curl -I "$REPLIT_URL" || echo "Пинг завершен (возможна ошибка, но это нормально)"
+          
+          # Логируем время
+          echo "✅ Бот пингован в $(date)"
